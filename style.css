@@ -1,0 +1,24 @@
+.containerWeather {
+  background-color: rgb(56, 56, 56);
+  color: white;
+  display: grid;
+  margin-bottom: 2px;
+}
+.searchCity {
+  background-color: lightgray;
+  height: 80vh;
+}
+.weatherCard {
+  margin-top: 10px;
+  height: 40vh;
+}
+.day {
+  display: inline-block;
+  height: 16vh;
+  width: 8vw;
+  background-color: blue;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-right: 1rem;
+}
