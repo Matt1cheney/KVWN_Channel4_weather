@@ -14,12 +14,24 @@
 }
 .day {
   display: inline-block;
-  height: 16vh;
-  width: 8vw;
-  background-color: blue;
+  height: 20vh;
+  width: 100%;
+  background-image: url("bluebackground.jpg");
   color: white;
   margin-top: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-right: 1rem;
+}
+img {
+height: 6vh;
+width: auto;
+}
+.cityName {
+  font-size: 30px;
+  font-weight: bold;
+}
+.date{
+  font-size: 30px;
+  font-weight: bold;
 }
