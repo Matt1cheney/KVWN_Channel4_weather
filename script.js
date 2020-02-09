@@ -28,13 +28,13 @@ $(function() {
     );
     localStorage.setItem($(`.button${buttonCount}`).text(), "string");
     
-    //console.log(dayWeatherCall);
+    
     get5DayForecast();
     currentWeather();
 
     function currentWeather() {
       $.get(currentWeatherCall, function(response) {
-        console.log(response);
+      
         $(".date").text(moment().format("MM/ DD/ YY"));
         $(".date").append(
           $("<img>").attr(
@@ -51,7 +51,7 @@ $(function() {
     }
 
     function parseForecastData(forecast) {
-      // console.log(forecast);
+     
       let currentDay = "00";
       let dayCount = 0;
       let hourCount = 43200;
@@ -90,7 +90,7 @@ $(function() {
         forDate = moment
           .unix(timeBlock.dt)
           .format("dddd, MMMM, Do, YYYY h:mm:ss A");
-        // console.log(forDate);
+      
 
         //day 1
 
@@ -137,7 +137,7 @@ $(function() {
     }
     function get5DayForecast() {
       $.get(dayWeatherCall, function(response) {
-        console.log(response);
+    
         let forecastArr = response.list;
         parseForecastData(forecastArr);
         // weatherCall.forEach(uvVal => {
@@ -152,5 +152,5 @@ $(function() {
        get5DayForecast();
     });
   });
-  //parseForecastData(window.testResponse.list);
+
 });
