@@ -21,7 +21,7 @@
   margin-top: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-right: 1rem;
+  
 }
 img {
 height: 6vh;
@@ -34,4 +34,8 @@ width: auto;
 .date{
   font-size: 30px;
   font-weight: bold;
+}
+.cityButton {
+  margin-top: .25rem;
+  
 }

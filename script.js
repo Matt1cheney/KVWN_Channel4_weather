@@ -23,7 +23,7 @@ $(function() {
     buttonCount++;
     $(".cityList").append(
       $("<button>", "<br/>")
-        .addClass(`col-12 btn btn-secondary btn-lg button${buttonCount}`)
+        .addClass(`col-12 btn btn-secondary btn-lg cityButton button${buttonCount}`)
         .text(weatherSearch)
     );
     localStorage.setItem($(`.button${buttonCount}`).text(), "string");
