@@ -146,7 +146,7 @@ $(function() {
       });
     }
     $(`.button${buttonCount}`).on("click", function() {
-     
+     $(".day").empty();
 
        currentWeather();
        get5DayForecast();
