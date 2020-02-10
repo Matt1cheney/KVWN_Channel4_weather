@@ -4,6 +4,8 @@ $(function() {
   let apiKey = "973464612f77fc58086327531b8be6f9";
   let weatherSearch = "";
   let currentWeatherurl = "https://api.openweathermap.org/data/2.5/weather?q=";
+  let uvUrl = "https://api.openweathermap.org/data/2.5/uvi?";
+
   let buttonCount = 0;
   // grabbing buttons from local storage
   localStorage.getItem($("derry"));
@@ -40,7 +42,10 @@ $(function() {
     currentWeather();
     // function for current weather
     function currentWeather() {
+      // https://samples.openweathermap.org/data/2.5/uvi?lat=37.75&lon=-122.37
+      // &appid=b6907d289e10d714a6e88b30761fae22
       $.get(currentWeatherCall, function(response) {
+        
         // show date and icon
         $(".date").text(moment().format("MM/ DD/ YY"));
         $(".date").append(
@@ -55,6 +60,16 @@ $(function() {
         $(".temp").text(`temp: ${Math.floor(response.main.temp)} F`);
         $(".humidity").text(`Humidity: ${response.main.humidity} %`);
         $(".windspeed").text(`Windspeed: ${response.wind.speed} MPH`);
+       
+        let uvCall =
+          uvUrl +
+          `lat=${response.coord.lat}` +
+          `&lon=${response.coord.lon}&appid=` +
+          apiKey;
+          $.get(uvCall, function(uvResponse){
+            $(".uvIndex").text(uvResponse.value)
+          })
+        
       });
     }
     // grab data
@@ -70,14 +85,13 @@ $(function() {
         tempVal = Math.floor(timeBlock.main.temp);
         humidVal = timeBlock.main.humidity;
         windSpeed = timeBlock.wind.speed;
-        // if statement for showing 
+        // if statement for showing
         if (day != currentDay) {
           currentDay = day;
 
           dayCount++;
           hourCount[4];
           // grabs the 12th hour of everyday
-          console.log(day, hour);
           $(`.day${dayCount}`).append(
             $("<li>").text(
               moment()
@@ -153,11 +167,11 @@ $(function() {
         // });
       });
     }
-    // event listener for button 
+    // event listener for button
     $(`.button${buttonCount}`).on("click", function() {
       // when clicked empty 5 day containers
       $(".day").empty();
-      // fire with the button value 
+      // fire with the button value
       currentWeather();
       get5DayForecast();
     });
