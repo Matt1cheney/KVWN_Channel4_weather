@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <!-- links for document -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -19,17 +20,20 @@
   </head>
   <body>
     <div class="text-center">
+      <!-- header -->
       <div class="containerWeather">
         <h1 class="display-4">Your Weather Forecast</h1>
       </div>
     </div>
     <div class="container-fluid">
       <div class="row">
+        <!-- sideBar for search -->
         <div class="col-md-3 card searchCity">
           <div class=" card-body">
             <h5 class="card-title">Search for a city:</h5>
             <div class="row">
               <div class="input-group md-form form-sm form-2 pl-0">
+                <!-- searchbox -->
                 <input
                 class="form-control my-0 py-1 red-border citySearch"
                 type="text"
@@ -43,6 +47,7 @@
                   </div>
                 </div>
               </div>
+              <!-- where city buttons pop up -->
               <ul class="cityList"></ul>
             </div>
           </div>
@@ -50,6 +55,7 @@
           <div class="col-md-9 card weatherCard">
             <div class="row">
               <div class="card-body">
+                <!-- current weather -->
                 <span class="col-4 cityName card-title"></span>    
                 <span class=" date"></span>
               </h2>
@@ -66,6 +72,7 @@
             <br/>
           </div>
           <div class="  forecast">
+            <!-- the 5 day forecast containers -->
             <h4 class="row 5day">5-day Forecast:</h4>
             <div class="col-2 list-unstyled day day1">
               
@@ -86,6 +93,7 @@
         </div>
       </div>
     </div>
+    <!-- all script files -->
     <script
     src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
