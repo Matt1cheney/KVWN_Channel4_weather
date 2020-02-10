@@ -11,19 +11,23 @@
     have a function when the search button is clicked grab the value in the search box 
     and input into the api request then grab those values.
 
-    ![onclick searbox](./images/onclickfunc.png)
+    ![onclick searbox]
+    (./images/onclickfunc.png)
 
     use a few functions to traverse through the array and grab the values I need and print them on screen.
     
-    ![current weather](./images/currentweatherfunciton.png)
+    ![current weather]
+    (./images/currentweatherfunciton.png)
 
     created a function that uses the current weather api and print elements on screen.
 
-    ![5 day weather](./images/5dayweatherfunc.png)
+    ![5 day weather]
+    (./images/5dayweatherfunc.png)
 
     grab the information from the 5 day weather and print it on screen.
 
 
-    ![button func](./images/buttonfire.png)
+    ![button func]
+    (./images/buttonfire.png)
 
     this function grabs the value of the button and re inputs it into the api call and re-fires it.
